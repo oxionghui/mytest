@@ -53,12 +53,11 @@ void TrayIconWidget::_addTrayIcon()
 	ncd.cbSize = sizeof(NOTIFYICONDATAW);
 	ncd.hWnd = winId();
 	ncd.uID = KTrayIconId;
-	// http://stackoverflow.com/questions/12954796/shell-notifyicon-an-attempt-was-made-to-reference-a-token-that-does-not-exist
 	const static GUID c_trayicon_id = { 0x3961542c, 0x37e7, 0x44e4, { 0xa0, 0xc2, 0xb3, 0x1d, 0x2c, 0xfd, 0x86, 0x16 } };
 	ncd.guidItem = c_trayicon_id;
 
 	ncd.uFlags = NIF_ICON | NIF_MESSAGE;
-	QIcon icon("d:/icon.png");
+	QIcon icon(":theme/icon.png");
 	ncd.hIcon = icon.pixmap(16, 16).toWinHICON();
 	ncd.uCallbackMessage = KTrayIconMsg;
 
@@ -71,7 +70,6 @@ void TrayIconWidget::_removeTrayIcon()
 	ncd.cbSize = sizeof(NOTIFYICONDATAW);
 	ncd.hWnd = winId();
 	ncd.uID = KTrayIconId;
-	// http://stackoverflow.com/questions/12954796/shell-notifyicon-an-attempt-was-made-to-reference-a-token-that-does-not-exist
 	const static GUID c_trayicon_id = { 0x3961542c, 0x37e7, 0x44e4, { 0xa0, 0xc2, 0xb3, 0x1d, 0x2c, 0xfd, 0x86, 0x16 } };
 	ncd.guidItem = c_trayicon_id;
 

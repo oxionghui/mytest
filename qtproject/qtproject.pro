@@ -8,16 +8,14 @@ DEPENDPATH += . src
 INCLUDEPATH += .
 
 # Input
-HEADERS += myqtproject.h
 HEADERS += signal-slot.h
 HEADERS += src/trayicon.h
 HEADERS += src/model-view.h
 HEADERS += src/scene-view.h
 HEADERS += src/winThread.h
 SOURCES += main.cpp
-SOURCES += myqtproject.cpp
 SOURCES += src/trayicon.cpp
 SOURCES += src/model-view.cpp
 SOURCES += src/scene-view.cpp
 
-RESOURCES += myqtproject.qrc
+RESOURCES += qtproject.qrc
